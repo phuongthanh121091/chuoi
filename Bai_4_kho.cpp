@@ -7,21 +7,20 @@ VD: 2, 5, 6, 8, 9, 12, 22, 24 là mảng tăng dần*/
 #include <cmath>
 int main ()
 {
-    int a = 0;
-    int b[100];
-    int n = 0;
-    std::cout<<"Nhap vao so a: ";
-    std::cin>> a;
-    for (int i = 0; a != 0; i++)
+     int n = 0;
+    std::cout << "Nhan vao n: ";
+    std::cin>>n;
+    int a[n];
+    for (int i = 0; i < n; i++)
     {
-        b[i] = a%10;
-        a = a/10;
-        n++;
+        std::cout<<"Nhap vao a["<<i<<"]: ";
+        std::cin>>a[i];
     }
+
     for (int i = 0; i< n -1; i++)
     {
         //std::cout<<b[i];
-        if ( b[i] < b[i + 1])
+        if ( a[i] > a[i + 1])
         {
             std::cout<<"Chuoi khong tang dan.";
             return 0;
